@@ -1,0 +1,471 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>日本车载IVI厂商商业调查分析报告</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', 'Noto Sans SC', sans-serif;
+            background-color: #FFFFFF;
+        }
+        .card {
+            background-color: white;
+            border: 1px solid #E5E7EB;
+            border-radius: 1.25rem; /* 20px */
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            overflow: hidden;
+            position: relative;
+        }
+        .highlight-gradient-blue {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0), rgba(59, 130, 246, 0.05));
+        }
+        .highlight-gradient-green {
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0), rgba(16, 185, 129, 0.05));
+        }
+        .highlight-gradient-purple {
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0), rgba(139, 92, 246, 0.05));
+        }
+        .highlight-gradient-orange {
+            background: linear-gradient(135deg, rgba(249, 115, 22, 0), rgba(249, 115, 22, 0.05));
+        }
+        .highlight-gradient-red {
+            background: linear-gradient(135deg, rgba(239, 68, 68, 0), rgba(239, 68, 68, 0.05));
+        }
+        .highlight-gradient-gray {
+            background: linear-gradient(135deg, rgba(107, 114, 128, 0), rgba(107, 114, 128, 0.05));
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <div class="max-w-7xl mx-auto p-4 md:p-8">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-6">
+            <!-- 标题卡片 -->
+            <div class="card md:col-span-4 p-8 flex flex-col justify-center items-center text-center relative">
+                <div class="absolute top-0 left-0 w-full h-full highlight-gradient-blue"></div>
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">日本车载IVI厂商</h1>
+                <h2 class="text-3xl md:text-4xl font-bold text-blue-600 mb-6">商业调查分析报告</h2>
+                <p class="text-lg text-gray-500 max-w-3xl">基于2025年第三季度财报数据的深度分析，聚焦Denso、Denso TEN、日产和索尼本田在车载信息娱乐系统领域的竞争格局</p>
+            </div>
+
+            <!-- 项目概况卡片 -->
+            <div class="card md:col-span-2 md:row-span-2 p-8 flex flex-col justify-between relative">
+                <div class="absolute top-0 left-0 w-full h-full highlight-gradient-green"></div>
+                <div>
+                    <div class="flex items-center mb-4">
+                        <i class="fa-solid fa-chart-line text-2xl text-green-500 mr-3"></i>
+                        <h3 class="text-xl font-bold text-gray-800">项目概况与研究背景</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">在全球汽车产业加速向智能化、电动化转型的关键时期，车载信息娱乐系统（IVI）已成为车企差异化竞争的核心要素。</p>
+                    <p class="text-gray-600">本报告基于截至2025年第三季度的最新财报数据，对Denso、Denso TEN、日产和索尼本田四家公司进行全面的商业调查分析。</p>
+                </div>
+                <div class="mt-6 grid grid-cols-3 gap-4 text-center">
+                    <div class="bg-green-50 rounded-lg p-3">
+                        <div class="text-2xl font-bold text-green-600">4</div>
+                        <div class="text-sm text-gray-500">核心企业</div>
+                    </div>
+                    <div class="bg-green-50 rounded-lg p-3">
+                        <div class="text-2xl font-bold text-green-600">3</div>
+                        <div class="text-sm text-gray-500">分析维度</div>
+                    </div>
+                    <div class="bg-green-50 rounded-lg p-3">
+                        <div class="text-2xl font-bold text-green-600">2025</div>
+                        <div class="text-sm text-gray-500">数据年份</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Denso 财务卡片 -->
+            <div class="card md:col-span-2 p-6 flex flex-col justify-between relative">
+                <div class="absolute top-0 left-0 w-full h-full highlight-gradient-blue"></div>
+                <div class="flex justify-between items-start mb-4">
+                    <div>
+                        <h3 class="text-lg font-bold text-gray-800">Denso 电装</h3>
+                        <p class="text-sm text-gray-500">2025财年前三季度</p>
+                    </div>
+                    <i class="fa-solid fa-car-battery text-3xl text-blue-500"></i>
+                </div>
+                <div class="grid grid-cols-2 gap-4 mb-4">
+                    <div>
+                        <p class="text-xs text-gray-500">合并营收</p>
+                        <p class="text-2xl font-bold text-gray-800">52,884亿日元</p>
+                        <p class="text-sm text-green-500"><i class="fa-solid fa-arrow-up"></i> -1.2% YoY</p>
+                    </div>
+                    <div>
+                        <p class="text-xs text-gray-500">营业利润</p>
+                        <p class="text-2xl font-bold text-gray-800">4,016亿日元</p>
+                        <p class="text-sm text-green-500"><i class="fa-solid fa-arrow-up"></i> +68.3% YoY</p>
+                    </div>
+                </div>
+                <div class="bg-blue-50 rounded-lg p-3">
+                    <p class="text-sm text-blue-800"><i class="fa-solid fa-lightbulb mr-1"></i> 第三季度强劲反弹，得益于汇率收益和成本管理</p>
+                </div>
+            </div>
+
+            <!-- 日产财务卡片 -->
+            <div class="card md:col-span-2 p-6 flex flex-col justify-between relative">
+                <div class="absolute top-0 left-0 w-full h-full highlight-gradient-red"></div>
+                <div class="flex justify-between items-start mb-4">
+                    <div>
+                        <h3 class="text-lg font-bold text-gray-800">日产汽车</h3>
+                        <p class="text-sm text-gray-500">2025财年第三季度</p>
+                    </div>
+                    <i class="fa-solid fa-car text-3xl text-red-500"></i>
+                </div>
+                <div class="grid grid-cols-2 gap-4 mb-4">
+                    <div>
+                        <p class="text-xs text-gray-500">季度净亏损</p>
+                        <p class="text-2xl font-bold text-red-600">1,062亿日元</p>
+                        <p class="text-sm text-red-500"><i class="fa-solid fa-arrow-down"></i> 连续五季度亏损</p>
+                    </div>
+                    <div>
+                        <p class="text-xs text-gray-500">全球销量</p>
+                        <p class="text-2xl font-bold text-gray-800">77.3万辆</p>
+                        <p class="text-sm text-red-500"><i class="fa-solid fa-arrow-down"></i> -4.5% YoY</p>
+                    </div>
+                </div>
+                <div class="bg-red-50 rounded-lg p-3">
+                    <p class="text-sm text-red-800"><i class="fa-solid fa-triangle-exclamation mr-1"></i> 面临严峻财务挑战，预计全年营业亏损2,750亿日元</p>
+                </div>
+            </div>
+
+            <!-- 财务对比图表卡片 -->
+            <div class="card md:col-span-4 p-6 flex flex-col relative">
+                <div class="absolute top-0 left-0 w-full h-full highlight-gradient-gray"></div>
+                <div class="flex items-center mb-4">
+                    <i class="fa-solid fa-chart-bar text-2xl text-gray-500 mr-3"></i>
+                    <h3 class="text-xl font-bold text-gray-800">主要企业财务表现对比</h3>
+                </div>
+                <div class="flex-grow h-64 md:h-80">
+                    <canvas id="financialChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Denso TEN 卡片 -->
+            <div class="card md:col-span-2 p-6 flex flex-col justify-between relative">
+                <div class="absolute top-0 left-0 w-full h-full highlight-gradient-purple"></div>
+                <div class="flex justify-between items-start mb-4">
+                    <div>
+                        <h3 class="text-lg font-bold text-gray-800">Denso TEN</h3>
+                        <p class="text-sm text-gray-500">专业车载电子系统</p>
+                    </div>
+                    <i class="fa-solid fa-radio text-3xl text-purple-500"></i>
+                </div>
+                <div class="grid grid-cols-2 gap-4 mb-4">
+                    <div>
+                        <p class="text-xs text-gray-500">Q3总收入</p>
+                        <p class="text-2xl font-bold text-gray-800">1.862亿美元</p>
+                    </div>
+                    <div>
+                        <p class="text-xs text-gray-500">营业利润</p>
+                        <p class="text-2xl font-bold text-gray-800">6,050万美元</p>
+                    </div>
+                </div>
+                <div class="bg-purple-50 rounded-lg p-3">
+                    <p class="text-sm text-purple-800"><i class="fa-solid fa-handshake mr-1"></i> 与Cinemo等国际伙伴合作，提供全方位IVI解决方案</p>
+                </div>
+            </div>
+
+            <!-- 索尼本田卡片 -->
+            <div class="card md:col-span-2 p-6 flex flex-col justify-between relative">
+                <div class="absolute top-0 left-0 w-full h-full highlight-gradient-orange"></div>
+                <div class="flex justify-between items-start mb-4">
+                    <div>
+                        <h3 class="text-lg font-bold text-gray-800">索尼本田移动</h3>
+                        <p class="text-sm text-gray-500">高端电动车新势力</p>
+                    </div>
+                    <i class="fa-solid fa-robot text-3xl text-orange-500"></i>
+                </div>
+                <div class="grid grid-cols-2 gap-4 mb-4">
+                    <div>
+                        <p class="text-xs text-gray-500">营业亏损</p>
+                        <p class="text-2xl font-bold text-orange-600">520亿日元</p>
+                        <p class="text-sm text-orange-500"><i class="fa-solid fa-arrow-up"></i> 亏损扩大154%</p>
+                    </div>
+                    <div>
+                        <p class="text-xs text-gray-500">首款车型</p>
+                        <p class="text-2xl font-bold text-gray-800">Afeela 1</p>
+                        <p class="text-sm text-gray-500">2025年底发布</p>
+                    </div>
+                </div>
+                <div class="bg-orange-50 rounded-lg p-3">
+                    <p class="text-sm text-orange-800"><i class="fa-solid fa-star mr-1"></i> 聚焦高端市场，IVI系统技术领先，配备全景屏幕和360空间音频</p>
+                </div>
+            </div>
+
+            <!-- 区域市场表现卡片 -->
+            <div class="card md:col-span-4 p-6 flex flex-col relative">
+                <div class="absolute top-0 left-0 w-full h-full highlight-gradient-green"></div>
+                <div class="flex items-center mb-4">
+                    <i class="fa-solid fa-globe text-2xl text-green-500 mr-3"></i>
+                    <h3 class="text-xl font-bold text-gray-800">区域市场表现分析</h3>
+                </div>
+                <div class="flex-grow h-64 md:h-80">
+                    <canvas id="regionalChart"></canvas>
+                </div>
+            </div>
+
+            <!-- IVI产品对比卡片 -->
+            <div class="card md:col-span-4 p-6 flex flex-col relative">
+                <div class="absolute top-0 left-0 w-full h-full highlight-gradient-blue"></div>
+                <div class="flex items-center mb-4">
+                    <i class="fa-solid fa-microchip text-2xl text-blue-500 mr-3"></i>
+                    <h3 class="text-xl font-bold text-gray-800">IVI产品阵列对比</h3>
+                </div>
+                <div class="overflow-x-auto">
+                    <table class="min-w-full bg-white">
+                        <thead>
+                            <tr class="bg-blue-50">
+                                <th class="py-3 px-4 text-left text-xs font-medium text-blue-500 uppercase tracking-wider">企业</th>
+                                <th class="py-3 px-4 text-left text-xs font-medium text-blue-500 uppercase tracking-wider">核心IVI产品</th>
+                                <th class="py-3 px-4 text-left text-xs font-medium text-blue-500 uppercase tracking-wider">技术特点</th>
+                                <th class="py-3 px-4 text-left text-xs font-medium text-blue-500 uppercase tracking-wider">差异化优势</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-200">
+                            <tr>
+                                <td class="py-3 px-4 whitespace-nowrap">
+                                    <div class="font-medium text-gray-900">Denso</div>
+                                </td>
+                                <td class="py-3 px-4">
+                                    <div class="text-sm text-gray-900">Gen 4 Cockpit One (CP1)</div>
+                                    <div class="text-xs text-gray-500">7-11.6英寸多种配置</div>
+                                </td>
+                                <td class="py-3 px-4 text-sm text-gray-700">
+                                    模块化设计，支持CarPlay/Android Auto，与ADAS深度集成
+                                </td>
+                                <td class="py-3 px-4 text-sm text-gray-700">
+                                    <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
+                                        <i class="fa-solid fa-cogs mr-1"></i>系统集成
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="py-3 px-4 whitespace-nowrap">
+                                    <div class="font-medium text-gray-900">Denso TEN</div>
+                                </td>
+                                <td class="py-3 px-4">
+                                    <div class="text-sm text-gray-900">Display Audio系列</div>
+                                    <div class="text-xs text-gray-500">AVN系统，后座娱乐</div>
+                                </td>
+                                <td class="py-3 px-4 text-sm text-gray-700">
+                                    Android Automotive OS，本地化定制，成本效益优化
+                                </td>
+                                <td class="py-3 px-4 text-sm text-gray-700">
+                                    <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-purple-100 text-purple-800">
+                                        <i class="fa-solid fa-wallet mr-1"></i>成本优势
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="py-3 px-4 whitespace-nowrap">
+                                    <div class="font-medium text-gray-900">日产</div>
+                                </td>
+                                <td class="py-3 px-4">
+                                    <div class="text-sm text-gray-900">云舒适座舱</div>
+                                    <div class="text-xs text-gray-500">鸿蒙座舱5，N6车型</div>
+                                </td>
+                                <td class="py-3 px-4 text-sm text-gray-700">
+                                    高通骁龙8775芯片，15.6英寸2.5K屏幕，Google服务集成
+                                </td>
+                                <td class="py-3 px-4 text-sm text-gray-700">
+                                    <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800">
+                                        <i class="fa-solid fa-mobile-screen-button mr-1"></i>生态整合
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="py-3 px-4 whitespace-nowrap">
+                                    <div class="font-medium text-gray-900">索尼本田</div>
+                                </td>
+                                <td class="py-3 px-4">
+                                    <div class="text-sm text-gray-900">Afeela IVI系统</div>
+                                    <div class="text-xs text-gray-500">全景屏幕，360空间音频</div>
+                                </td>
+                                <td class="py-3 px-4 text-sm text-gray-700">
+                                    Personal Agent，媒体条，40个传感器，AI语音助手
+                                </td>
+                                <td class="py-3 px-4 text-sm text-gray-700">
+                                    <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-orange-100 text-orange-800">
+                                        <i class="fa-solid fa-star mr-1"></i>技术创新
+                                    </span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- 组织结构对比卡片 -->
+            <div class="card md:col-span-2 md:row-span-2 p-6 flex flex-col relative">
+                <div class="absolute top-0 left-0 w-full h-full highlight-gradient-purple"></div>
+                <div class="flex items-center mb-4">
+                    <i class="fa-solid fa-sitemap text-2xl text-purple-500 mr-3"></i>
+                    <h3 class="text-xl font-bold text-gray-800">组织结构对比</h3>
+                </div>
+                <div class="space-y-4 flex-grow flex flex-col justify-around">
+                    <div class="bg-white border border-gray-200 rounded-lg p-4">
+                        <h4 class="font-semibold text-gray-800 mb-2">Denso</h4>
+                        <p class="text-sm text-gray-600 mb-2">矩阵式组织结构</p>
+                        <p class="text-xs text-gray-500">2025年新设CX Center Department，加强用户体验</p>
+                    </div>
+                    <div class="bg-white border border-gray-200 rounded-lg p-4">
+                        <h4 class="font-semibold text-gray-800 mb-2">Denso TEN</h4>
+                        <p class="text-sm text-gray-600 mb-2">集中化管理结构</p>
+                        <p class="text-xs text-gray-500">专业化IVI测试体系，稳定的组织架构</p>
+                    </div>
+                    <div class="bg-white border border-gray-200 rounded-lg p-4">
+                        <h4 class="font-semibold text-gray-800 mb-2">日产</h4>
+                        <p class="text-sm text-gray-600 mb-2">事业部制改革</p>
+                        <p class="text-xs text-gray-500">CTO和制造官更换，加强技术创新和成本控制</p>
+                    </div>
+                    <div class="bg-white border border-gray-200 rounded-lg p-4">
+                        <h4 class="font-semibold text-gray-800 mb-2">索尼本田</h4>
+                        <p class="text-sm text-gray-600 mb-2">合资企业架构</p>
+                        <p class="text-xs text-gray-500">扁平化组织，敏捷开发流程，跨职能测试团队</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 战略建议卡片 -->
+            <div class="card md:col-span-2 p-6 flex flex-col relative">
+                <div class="absolute top-0 left-0 w-full h-full highlight-gradient-orange"></div>
+                <div class="flex items-center mb-4">
+                    <i class="fa-solid fa-lightbulb text-2xl text-orange-500 mr-3"></i>
+                    <h3 class="text-xl font-bold text-gray-800">核心战略建议</h3>
+                </div>
+                <div class="space-y-4">
+                    <div class="bg-white border-l-4 border-blue-500 pl-4 py-2 rounded">
+                        <h4 class="font-semibold text-blue-800">技术融合</h4>
+                        <p class="text-sm text-gray-600">纯硬件或纯软件的竞争优势正在弱化，只有实现技术融合才能在未来竞争中胜出。</p>
+                    </div>
+                    <div class="bg-white border-l-4 border-green-500 pl-4 py-2 rounded">
+                        <h4 class="font-semibold text-green-800">本地化能力</h4>
+                        <p class="text-sm text-gray-600">特别是在中国这样的重要市场，本地化不仅体现在产品上，更体现在测试能力上。</p>
+                    </div>
+                    <div class="bg-white border-l-4 border-purple-500 pl-4 py-2 rounded">
+                        <h4 class="font-semibold text-purple-800">组织敏捷性</h4>
+                        <p class="text-sm text-gray-600">在快速变化的市场环境中，能够快速响应和调整的组织架构将获得竞争优势。</p>
+                    </div>
+                    <div class="bg-white border-l-4 border-red-500 pl-4 py-2 rounded">
+                        <h4 class="font-semibold text-red-800">测试价值重估</h4>
+                        <p class="text-sm text-gray-600">高质量的测试是产品差异化和用户满意度的保障，应被视为投资而非成本。</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 未来展望卡片 -->
+            <div class="card md:col-span-2 p-6 flex flex-col justify-center items-center text-center relative">
+                <div class="absolute top-0 left-0 w-full h-full highlight-gradient-blue"></div>
+                <i class="fa-solid fa-rocket text-5xl text-blue-500 mb-4"></i>
+                <h3 class="text-2xl font-bold text-gray-800 mb-3">未来展望</h3>
+                <p class="text-gray-600">面对车载IVI技术的快速发展和市场竞争的日益激烈，各公司都需要在技术创新、组织优化、市场策略等方面持续投入。只有那些能够准确把握行业趋势、勇于创新变革、注重用户体验的企业，才能在这场智能化转型的大潮中立于不败之地。</p>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    // 财务对比图表
+    const financialCtx = document.getElementById('financialChart').getContext('2d');
+    new Chart(financialCtx, {
+        type: 'bar',
+        data: {
+            labels: ['Denso', '日产', 'Denso TEN', '索尼本田'],
+            datasets: [
+                {
+                    label: '营收 (亿日元)',
+                    data: [52884, -2219, 186, 0],
+                    backgroundColor: 'rgba(59, 130, 246, 0.7)',
+                    borderColor: 'rgba(59, 130, 246, 1)',
+                    borderWidth: 1
+                },
+                {
+                    label: '利润 (亿日元)',
+                    data: [4016, -1062, 60.5, -520],
+                    backgroundColor: 'rgba(16, 185, 129, 0.7)',
+                    borderColor: 'rgba(16, 185, 129, 1)',
+                    borderWidth: 1
+                }
+            ]
+        },
+        options: {
+            maintainAspectRatio: false,
+            responsive: true,
+            plugins: {
+                legend: {
+                    position: 'top',
+                },
+                title: {
+                    display: true,
+                    text: '2025财年主要企业财务表现 (数据截至Q3)'
+                }
+            },
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    ticks: {
+                        callback: function(value) {
+                            return value + ' 亿日元';
+                        }
+                    }
+                }
+            }
+        }
+    });
+
+    // 区域市场表现图表
+    const regionalCtx = document.getElementById('regionalChart').getContext('2d');
+    new Chart(regionalCtx, {
+        type: 'line',
+        data: {
+            labels: ['日本', '北美', '欧洲', '亚洲(除日)', '其他'],
+            datasets: [
+                {
+                    label: 'Denso 营收 (亿日元)',
+                    data: [20995, 9730, 3630, 9521, 1800],
+                    borderColor: 'rgba(59, 130, 246, 1)',
+                    backgroundColor: 'rgba(59, 130, 246, 0.1)',
+                    tension: 0.4,
+                    fill: true
+                },
+                {
+                    label: 'Denso 营业利润 (亿日元)',
+                    data: [316, 569, 86, 959, 120],
+                    borderColor: 'rgba(16, 185, 129, 1)',
+                    backgroundColor: 'rgba(16, 185, 129, 0.1)',
+                    tension: 0.4,
+                    fill: true
+                }
+            ]
+        },
+        options: {
+            maintainAspectRatio: false,
+            responsive: true,
+            plugins: {
+                legend: {
+                    position: 'top',
+                },
+                title: {
+                    display: true,
+                    text: 'Denso 2025财年上半年区域市场表现'
+                }
+            },
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    ticks: {
+                        callback: function(value) {
+                            return value + ' 亿日元';
+                        }
+                    }
+                }
+            }
+        }
+    });
+</script>
+</html>
